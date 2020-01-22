@@ -1,8 +1,8 @@
-ARG BASE_IMAGE=rstudio/r-base:3.5-xenial
-FROM ${BASE_IMAGE}:%%VARIANT%%
+ARG BASE_IMAGE=rstudio/r-base
+FROM ${BASE_IMAGE}:xenial
 
-ARG R_VERSION=%%R_VERSION%%
-ARG OS_IDENTIFIER=%%OS_IDENTIFIER%%
+ARG R_VERSION=3.6.2
+ARG OS_IDENTIFIER=ubuntu-1604
 
 # Install R
 RUN wget https://cdn.rstudio.com/r/${OS_IDENTIFIER}/pkgs/r-${R_VERSION}_1_amd64.deb && \
